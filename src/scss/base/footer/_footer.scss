@@ -1,0 +1,21 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.footer {
+  padding: 3rem 0;
+  border-bottom: 0.5rem solid var.$color_primary;
+  &__grid {
+    @include mx.media-tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__copyright {
+    text-align: center;
+    font-size: 2.4rem;
+    margin-top: 3rem;
+    @include mx.media-tablet {
+      margin-top: 0;
+    }
+  }
+}

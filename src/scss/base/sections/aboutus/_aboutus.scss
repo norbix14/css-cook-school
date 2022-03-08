@@ -1,0 +1,20 @@
+@use 'base/variables' as var;
+@use 'base/mixins' as mx;
+
+.aboutus {
+  padding: 5rem 0;
+  &__heading {
+    @include mx.heading();
+  }
+  &__grid {
+    @include mx.media-tablet {
+      @include mx.grid(3, 2rem);
+    }
+  }
+  &__block {
+    text-align: center;
+  }
+  &__img {
+    margin: 0 auto;
+  }
+}

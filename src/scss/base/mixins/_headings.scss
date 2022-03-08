@@ -1,0 +1,15 @@
+@mixin heading($filename: 'separador.png') {
+  $_imgFolder: '../img';
+  $_imgSubfolder: '/util';
+  $_url: $_imgFolder + $_imgSubfolder + '/' + $filename;
+  text-align: center;
+  &::after {
+    content: '';
+    display: block;
+    height: 10rem;
+    margin: 0 auto;
+    background-image: url($_url);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
